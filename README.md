@@ -1,5 +1,5 @@
 # Pokesearch
-PokeSearch is a Pokedex website containing all 898 current pokemon. The main function of the site is to provide a useful filter bar to help users sort through pokemon more easily. The filter bar currently filters on name or type of pokemon.
+PokeSearch is a Pokedex website which uses PokéAPI to display information about all 898 current pokemon. The main function of the site is to provide a useful filter bar to help users sort through pokemon more easily. The filter bar currently filters on name or type of pokemon.
 
 # Built with
 - Javascript
