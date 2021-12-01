@@ -1,2 +1,2 @@
 # pokesearch
-PokeSearch is a Pokedex that can be filtered
+PokeSearch is a Pokedex website with a filter bar
