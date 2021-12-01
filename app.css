@@ -1,0 +1,124 @@
+body {
+    font-family: sans-serif;
+    background-color: #cdb8f1;
+}
+
+/* Title text */
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 2px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.loadContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 250px;
+    margin: auto;
+    margin-top: 25vh;
+}
+
+.loadPokeball {
+    width: 130px;
+    height: 130px;
+    border: 6px solid #464646;
+    border-radius: 50%;
+    background-image: linear-gradient(#c7243d 58px, white 58px);
+    position: relative;
+    animation: spin 5s infinite linear;
+}
+
+@keyframes spin{
+    from{
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(359deg);
+    }
+}
+
+.loadPokeball::before {
+    content: "";
+    position: absolute;
+    height: 6px;
+    width: 120px;
+    background-color: #464646;
+    top: 54px;
+}
+
+.loadPokeball::after {
+    content: "";
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-image: radial-gradient(#ffffff 0px, #ffffff 7px, #464646 7px,
+                                      #464646 10px, #ffffff 10px, #ffffff 15px, 
+                                      #464646 15px);
+    border-radius: 50%;
+    top: 37.5px;
+    left: 37.5px;
+}
+
+/* Pokemon card list */
+#pokemonList {
+    padding-inline: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 30px;
+}
+
+/* Pokemon cards */
+.pokemon {
+    list-style-type: none;
+    background-color: #a89ae4;
+    border-radius: 20px;
+	box-shadow: 0 4px 12px rgba(100, 100, 100, 0.5);
+    padding: 10px 20px;
+    text-align: center;
+    box-shadow: 2px;
+}
+
+/* Pokemon sprites */
+.pokemon img {
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.25);
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	text-align: center;
+}
+
+.pokemon p {
+    margin: 12px;
+}
+  
+/* Search bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #cdb8f1;
+    padding-top: 2px;
+    padding-bottom: 30px;
+}
+  
+/* active element */
+.search-bar a.active {
+    background-color: #2196F3;
+    color: white;
+}
+  
+/* Search box */
+.search-bar input[type=text] {
+    padding: 6px;
+    border: none;
+    font-size: 17px;
+    background-color: #dbd9f0;
+}
