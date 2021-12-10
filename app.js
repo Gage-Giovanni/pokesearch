@@ -44,12 +44,27 @@ const fillPokeList = async () => {
 const showCards = (pokemons) => {
     const htmlString = pokemons
         .map((pokemon) => {
+        	/* With this I handle one and multiple types element */
+        	let types = "Type: ";
+        	pokemon.types.map((type, index) =>{
+        		if(index == 1){
+        			types  =types.replace("Type:", "Types:");
+        		}
+        		if (index == 0){
+        			types += type.type.name;
+        		}
+        		else{
+        			types+= ' ' + type.type.name;
+        		}
+        		
+        	})
             return `
                 <li class="pokemon">
                     <img src="${pokemon.sprites.front_default}"></img>
                     <h2>${pokemon.name}</h2>
                     <p>#${pokemon.id}</p>
-                    <p>Type: ${pokemon.types[0].type.name}</p>
+                    <p>${types}</p>
+
                 </li>
             `;
         })
