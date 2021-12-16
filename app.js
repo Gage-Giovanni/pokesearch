@@ -11,10 +11,10 @@ searchBox.addEventListener('keyup', (input) => {
     inputStr = input.target.value;
     pokeResults = pokeList.filter(pokemon => {
         let validResult = false;
-        if(pokemon.name.toLowerCase().includes(inputStr.toLowerCase())) {
+        if (pokemon.name.toLowerCase().includes(inputStr.toLowerCase())) {
             return true;
         } else {
-            for(let i=0;i<pokemon.types.length;i++) {
+            for (let i = 0; i < pokemon.types.length; i++) {
                 if (pokemon.types[i].type.name.includes(inputStr)) {
                     return true;
                 }
@@ -22,6 +22,7 @@ searchBox.addEventListener('keyup', (input) => {
         }
         return false;
     })
+    document.querySelector('.count').innerText = pokeResults.length
     showCards(pokeResults);
 });
 
@@ -35,7 +36,7 @@ const fillPokeList = async () => {
         }
         loadScreen.style.display = "none";
         showCards(pokeList);
-    } catch(err) {
+    } catch (err) {
         console.error(err);
     }
 };
