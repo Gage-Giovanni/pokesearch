@@ -122,3 +122,15 @@ h1 {
     font-size: 17px;
     background-color: #dbd9f0;
 }
+
+/* count for number of filter results */
+.count{
+    width: 50px;
+    height: 30px;
+    background-color: #a89ae4;
+    margin-left: 10px;
+    border: 2px solid rgba(100, 100, 100, 0.5);
+    border-radius: 4px;
+    padding: 5px;
+    text-align: center;
+}
